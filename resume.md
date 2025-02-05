@@ -30,7 +30,6 @@ subject: 'Subject'
 ```system architecture & design```
 ```entrepreneurship```
 ```load/stress testing```
-```WordPress```
 
 **Programming**: Lua, Haskell, Erlang, Go, Javascript
 **Databases**: MySQL, Postgres, sqlite, SQL Server, Oracle, Pick
