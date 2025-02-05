@@ -24,7 +24,7 @@ jobs:
           sudo apt-get install -y pandoc wkhtmltopdf
 
       - name: Convert Markdown to HTML
-        run: pandoc resume.md -f markdown -t html --self-contained -c style.css -s -o resume.html
+        run: pandoc README.md -f markdown -t html --self-contained -c style.css -s -o output.html
 
       - name: Convert HTML to PDF
         run: wkhtmltopdf output.html resume.pdf
