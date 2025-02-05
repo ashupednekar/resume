@@ -1,0 +1,41 @@
+name: Build and Deploy Resume
+
+on:
+  push:
+    branches:
+      - main  # Change if using a different branch
+  workflow_dispatch: # Allows manual triggering
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install Pandoc
+        run: sudo apt-get update && sudo apt-get install -y pandoc
+
+      - name: Convert Markdown to HTML
+        run: pandoc resume.md -f markdown -t html -c style.css -s -o resume.html
+
+      - name: Upload Resume Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .  # Uploads entire repo, or change to specific files
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
