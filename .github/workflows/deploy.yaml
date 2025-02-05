@@ -24,10 +24,10 @@ jobs:
           sudo apt-get install -y pandoc wkhtmltopdf
 
       - name: Convert Markdown to HTML
-        run: pandoc resume.md -f markdown -t html -c style.css -s -o resume.html
+        run: pandoc README.md -f markdown -t html -c style.css -s -o output.html
 
       - name: Convert HTML to PDF
-        run: wkhtmltopdf resume.html resume.pdf
+        run: wkhtmltopdf output.html resume.pdf
 
       - name: Upload Resume Artifact
         uses: actions/upload-pages-artifact@v3
