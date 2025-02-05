@@ -14,9 +14,10 @@ body {
     line-height: 1.6;
     color: #2d3748;
     background: linear-gradient(135deg, 
-        rgba(248, 255, 239, 0.4) 0%,    /* Subtle green tint */
-        rgba(255, 255, 255, 0.9) 50%,   /* White in middle */
-        rgba(255, 247, 238, 0.4) 100%   /* Subtle peach tint */
+       rgba(228, 240, 152, 0.4) 0%,    /* Light green tint on top left */
+       rgba(255, 255, 255, 1) 35%,     /* Bright white */
+       rgba(255, 255, 255, 1) 65%,     /* Bright white */
+       rgba(254, 217, 181, 1) 100%   /* Peach/orange tint on bottom right */
     );
     min-height: 100vh;
 }
