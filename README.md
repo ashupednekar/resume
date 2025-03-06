@@ -11,29 +11,27 @@ keywords:
   - 'mysql'
   - 'linux'
 author:
-- I am the author
+- Senior software engineer
 subject: 'Subject'
 ---
-###### [[example.com](https://example.com)] . [ me@example.com] . [ 123 456 7890 ]
+###### [[blog](https://ashupednekar.github.io)] . [ ashupednekar49@gmail.com] . [ +918806416267 ]
 
-### This is where you have your statement, that describes who you are and what you're looking for. Hopefully it's not cliche and it stands out in a good way
+### Primarily a backend developer with an inclination towards low level/systems and infra :)
 
 ## Skills
 
-```programming```
-```devops```
+```systems design```
+```infrastructure```
+```system architecture```
+```backend development```
+```libraries```
+```kubernetes```
 ```databases```
-```containers```
-```linux systems administration```
-```webservers```
-```project management```
-```system architecture & design```
-```entrepreneurship```
-```load/stress testing```
+```networks```
 
-**Programming**: Lua, Haskell, Erlang, Go, Javascript
-**Databases**: MySQL, Postgres, sqlite, SQL Server, Oracle, Pick
-**Linux**: Gentoo, Alpine, CentOS, Ubuntu, Debian
+<br>
+**Programming**: Rust, Go, Python, Lua, Zig, C 
+
 **DevOps**: Ansible, Chef, Kubernetes, etc.
 
 ## Experience
