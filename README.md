@@ -16,8 +16,7 @@ subject: 'Subject'
 ###### [[blog](https://ashupednekar.github.io)] . [ ashupednekar49@gmail.com] . [ +918806416267 ]
 
 
-# Ashutosh Pednekar  
-**Senior Software Architect | Backend Developer | Rust, Infra & Distributed Systems**  
+Backend Developer | Rust, Infra & Distributed Systems**  
 📍 Bengaluru, India • 🌐 [ashupednekar.github.io](https://ashupednekar.github.io) • ✉️ ashutosh@example.com  
 
 ---
