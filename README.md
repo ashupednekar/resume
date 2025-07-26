@@ -55,18 +55,28 @@ databases   tracing   linux internals
 - Led initiatives for containerized microservices architecture using Kubernetes, ensuring robust deployment and scaling strategies.  
 - Contributed to the adoption of a Rust-first backend stack, improving performance and reducing memory overhead in critical systems.  
 - Focused on building internal tools and infrastructure that align with DevOps principles, ensuring smooth continuous integration and deployment.
+- worked on natural language stuff back in the day
 
 ---
 
 ## Open Source & Personal work 
 
-- **liteginx**  
-- **litefunctions**  
-- **liteobjects**  
+- **liteginx**: reverse proxy for http routrd and tcp streams written in rust
+- **litefunctions**: my take on lambda functions, essentially a kubernetes operator managing cd, http ingestor and runtimes for various languages
+- **websocketstream**: stateless websocket ingestor, scaling websockets with persitent pubsub
+- **standard-error**: a simple crate that makes it easier for axum applications to do well defined errors with most from traits built in
+- **quickgrpc**: this is an old one, makes it simple to build gRPC servers in python, sorta like tonic does today, abstracting the protoc tooling 
+- implemented raft leader election from scratch
 
-- **[Rust: Handling Large Payloads Efficiently](https://ashupednekar.github.io/rust-handling-large-payloads/)**
-- **[Building a Distributed Task Scheduler with NATS JetStream](https://ashupednekar.github.io/distributed-task-scheduler-nats/)**
-- **[Exploring Rust’s Ecosystem for Backend Development](https://ashupednekar.github.io/rust-backend-ecosystem/)**  
+## Upcoming projects
+- tls terminarion support to liteginx
+- gRPC transcoding to openapi spec/ pubsub topics, mostly as a feature to liteginx
+- look into ferron for oss contributions
+- litedb, maybe a distributed sqlite with hashicorp raft library
+- liteobjects, this one's in progress, looking into object dtore internals
+
+
+I've documented most of my projects in my blog
 
 ---
 
