@@ -4,11 +4,6 @@ margin-right: 2cm
 margin-top: 1cm
 margin-bottom: 2cm
 title: Ashu Pednekar
-description-meta: 'This is the meta description for the HTML file, and one day the PDF file, for better SEO?'
-keywords:
-  - 'php'
-  - 'mysql'
-  - 'linux'
 author:
 - Senior software engineer
 subject: 'Subject'
@@ -56,6 +51,7 @@ databases   tracing   linux internals
 - Contributed to the adoption of a Rust-first backend stack, improving performance and reducing memory overhead in critical systems.  
 - Focused on building internal tools and infrastructure that align with DevOps principles, ensuring smooth continuous integration and deployment.
 - worked on natural language stuff back in the day
+- spearheaded proper helm based CI/CD to make deploying to varied targets repeatable and consistent, ranging from major cloud k8s distros to obscure ones, and on premise
 
 ---
 
