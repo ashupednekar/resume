@@ -36,7 +36,7 @@ databases   tracing   linux internals
 **Platforms & Tools**: Linux, Kubernetes, Docker, Wasm, NATS, Redis, Postgres  
 **Frameworks & Libraries**: Axum, Django, Go std lib, PyO3, Tokio  
 **Architecture**: Event-driven systems, distributed schedulers, tracing pipelines, fault-tolerant backends  
-**Certifications**: CKA, CKAD, CKS, Terraform Dev  
+**Certifications**: CKA, CKAD, CKS, Tensorflow Dev  
 
 ---
 
