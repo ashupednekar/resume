@@ -62,12 +62,12 @@ databases   tracing   linux internals
 - **websocketstream**: stateless websocket ingestor, scaling websockets with persitent pubsub
 - **standard-error**: a simple crate that makes it easier for axum applications to do well defined errors with most from traits built in
 - **quickgrpc**: this is an old one, makes it simple to build gRPC servers in python, sorta like tonic does today, abstracting the protoc tooling 
+- **serve-rs**: straightforward wsgi server written in rust thet just works, mostly
 - implemented raft leader election from scratch
 
 ## Upcoming projects
-- tls terminarion support to liteginx
+- TLS terminarion support to liteginx
 - gRPC transcoding to openapi spec/ pubsub topics, mostly as a feature to liteginx
-- look into ferron for oss contributions
 - litedb, maybe a distributed sqlite with hashicorp raft library
 - liteobjects, this one's in progress, looking into object dtore internals
 
@@ -77,7 +77,7 @@ I've documented most of my projects in my blog
 ---
 
 ## Interests
-
+- resilient infrastructure, SRE, building scalable systems
 - Low-level systems programming, eBPF, and Linux kernel internals  
 - Distributed systems, fault-tolerant design, and resilient service architectures  
 - Functional programming and designing systems with minimal side effects  
@@ -90,7 +90,7 @@ I've documented most of my projects in my blog
 ## Talks & Community
 
 - **PyCon India 2024** – *Quick gRPC for REST Developers*  
-- **Wasm IO 2025 (upcoming)** – *Wasm Filters for External Auth in NGINX/Envoy*  
+- DiscussD - tech podcast
 
 ---
 
