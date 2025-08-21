@@ -1,146 +1,480 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="author" content="Senior software engineer" />
-  <meta name="keywords" content="php, mysql, linux" />
-  <meta name="description" content="This is the meta description for the
-HTML file, and one day the PDF file, for better SEO?" />
-  <title>Ashu Pednekar</title>
-  <style>
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    /* The extra [class] is a hack that increases specificity enough to
-       override a similar rule in reveal.js */
-    ul.task-list[class]{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      font-size: inherit;
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-  </style>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashu Pednekar - Senior Software Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.25;
+            color: #333;
+            background: white;
+            font-size: 9pt;
+        }
+        
+        .container {
+            max-width: 8.5in;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 0.35fr 0.65fr;
+            min-height: 11in;
+            background: white;
+        }
+        
+        .left-column {
+            background: #f8f9fa;
+            padding: 14px 14px;
+            border-right: 3px solid #2c3e50;
+        }
+        
+        .right-column {
+            padding: 14px 14px;
+            background: white;
+        }
+        
+        .profile-section {
+            text-align: center;
+            margin-bottom: 12px;
+        }
+        
+        .profile-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid #2c3e50;
+            margin: 0 auto 12px;
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 9pt;
+            color: #666;
+        }
+        
+        .name {
+            font-size: 17pt;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 4px;
+            line-height: 1.1;
+        }
+        
+        .title {
+            font-size: 10.5pt;
+            color: #555;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+        
+        .contact-info {
+            font-size: 8pt;
+            color: #555;
+            text-align: left;
+        }
+        
+        .contact-info div {
+            margin-bottom: 6px;
+            word-break: break-word;
+        }
+        
+        .contact-info strong {
+            color: #2c3e50;
+        }
+        
+        .section-title {
+            font-size: 10pt;
+            font-weight: bold;
+            color: #2c3e50;
+            text-transform: uppercase;
+            margin: 12px 0 6px 0;
+            padding-bottom: 3px;
+            border-bottom: 2px solid #2c3e50;
+        }
+        
+        .section-title.right {
+            font-size: 11.5pt;
+            margin: 0 0 12px 0;
+        }
+        
+        .skills-section {
+            margin-bottom: 16px;
+        }
+        
+        .skill-category {
+            font-size: 8.5pt;
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 8px 0 4px 0;
+        }
+        
+        .skill-list {
+            font-size: 7.5pt;
+            color: #555;
+            line-height: 1.2;
+        }
+        
+        .certifications {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 8px;
+        }
+        
+        .cert-badge {
+            background: #2c3e50;
+            color: white;
+            padding: 3px 6px;
+            border-radius: 10px;
+            font-size: 7pt;
+            font-weight: bold;
+        }
+        
+        .interests ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .interests li {
+            font-size: 7.5pt;
+            color: #555;
+            margin-bottom: 3px;
+            padding-left: 10px;
+            position: relative;
+            line-height: 1.2;
+        }
+        
+        .interests li:before {
+            content: "▸";
+            color: #2c3e50;
+            position: absolute;
+            left: 0;
+        }
+        
+        .summary {
+            font-size: 9pt;
+            line-height: 1.35;
+            color: #444;
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+        
+        .experience-item {
+            margin-bottom: 16px;
+        }
+        
+        .job-header {
+            margin-bottom: 10px;
+        }
+        
+        .job-title {
+            font-size: 11.5pt;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .company {
+            font-size: 10.5pt;
+            color: #666;
+            font-weight: 500;
+        }
+        
+        .date {
+            font-size: 9pt;
+            color: #888;
+            font-style: italic;
+            float: right;
+        }
+        
+        .job-description ul {
+            margin: 8px 0;
+            padding-left: 16px;
+        }
+        
+        .job-description li {
+            font-size: 8pt;
+            color: #555;
+            margin-bottom: 3px;
+            line-height: 1.25;
+        }
+        
+        .projects-grid {
+            display: grid;
+            gap: 8px;
+        }
+        
+        .project-item {
+            padding: 8px;
+            background: #f8f9fa;
+            border-left: 3px solid #2c3e50;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .project-name {
+            font-size: 9pt;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 2px;
+        }
+        
+        .project-desc {
+            font-size: 8pt;
+            color: #555;
+            line-height: 1.2;
+        }
+        
+        .upcoming-projects ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .upcoming-projects li {
+            font-size: 8pt;
+            color: #555;
+            margin-bottom: 3px;
+            padding-left: 10px;
+            position: relative;
+            line-height: 1.2;
+        }
+        
+        .upcoming-projects li:before {
+            content: "→";
+            color: #2c3e50;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        .talks-item {
+            margin-bottom: 10px;
+        }
+        
+        .talk-title {
+            font-size: 9.5pt;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .talk-event {
+            font-size: 8.5pt;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .education-item {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .degree {
+            font-size: 10.5pt;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 4px;
+        }
+        
+        .focus {
+            font-size: 8.5pt;
+            color: #666;
+        }
+        
+        @media print {
+            body { 
+                margin: 0; 
+            }
+            .container { 
+                max-width: none; 
+                box-shadow: none;
+                min-height: auto;
+                page-break-after: always;
+            }
+            .left-column, .right-column {
+                padding: 16px;
+            }
+            
+            /* Force page break after specific content */
+            .page-break {
+                page-break-after: always;
+            }
+        }
+    </style>
 </head>
 <body>
-<header id="title-block-header">
-<h1 class="title">Ashu Pednekar</h1>
-<p class="author">Senior software engineer</p>
-</header>
-<h6 id="blog-.-ashupednekar49gmail.com-.-918806416267">[<a
-href="https://ashupednekar.github.io">blog</a>] . [
-ashupednekar49@gmail.com] . [ +918806416267 ]</h6>
-<h1 id="ashutosh-pednekar">Ashutosh Pednekar</h1>
-<p><strong>Senior Software Architect | Backend Developer | Rust, Infra
-&amp; Distributed Systems</strong><br />
-📍 Bengaluru, India • 🌐 <a
-href="https://ashupednekar.github.io">ashupednekar.github.io</a> • ✉️
-ashutosh@example.com</p>
-<hr />
-<h2 id="summary">Summary</h2>
-<p>Senior Software Architect with a strong focus on backend development,
-distributed systems, and Rust-based solutions.<br />
-I have experience designing scalable and resilient systems, working with
-high-throughput pub/sub systems, and building backend tools that align
-with modern infrastructure needs.<br />
-I believe in working on craft-oriented problems that emphasize
-correctness, simplicity, and maintainability. I enjoy leading teams that
-share a commitment to building thoughtful, scalable systems that are a
-joy to work on.<br />
-Currently focused on low-level systems programming, functional
-programming principles, and distributed systems design.</p>
-<hr />
-<h2 id="skills">Skills</h2>
-<pre><code>`distributed systems`   systems design  
-backend infrastructure   pub/sub systems  
-observability   functional programming   devtools  
-databases   tracing   linux internals  </code></pre>
-<p><strong>Programming</strong>: Rust (primary), Go, Python, Lua, Zig,
-C<br />
-<strong>Platforms &amp; Tools</strong>: Linux, Kubernetes, Docker, Wasm,
-NATS, Redis, Postgres<br />
-<strong>Frameworks &amp; Libraries</strong>: Axum, Django, Go std lib,
-PyO3, Tokio<br />
-<strong>Architecture</strong>: Event-driven systems, distributed
-schedulers, tracing pipelines, fault-tolerant backends<br />
-<strong>Certifications</strong>: CKA, CKAD, CKS, Terraform Dev</p>
-<hr />
-<h2 id="experience">Experience</h2>
-<h3 id="affinsys-ai">Affinsys AI</h3>
-<p><strong>Senior Software Architect</strong><br />
-<em>2021 – Present</em></p>
-<ul>
-<li>Designed and developed high-throughput task scheduling systems and
-pub/sub infrastructures using NATS for distributed task execution.<br />
-</li>
-<li>Worked on creating backend services for scalable, event-driven
-architectures with real-time observability and tracing.<br />
-</li>
-<li>Led initiatives for containerized microservices architecture using
-Kubernetes, ensuring robust deployment and scaling strategies.<br />
-</li>
-<li>Contributed to the adoption of a Rust-first backend stack, improving
-performance and reducing memory overhead in critical systems.<br />
-</li>
-<li>Focused on building internal tools and infrastructure that align
-with DevOps principles, ensuring smooth continuous integration and
-deployment.</li>
-</ul>
-<hr />
-<h2 id="open-source-personal-work">Open Source &amp; Personal work</h2>
-<ul>
-<li><p><strong>liteginx</strong><br />
-</p></li>
-<li><p><strong>litefunctions</strong><br />
-</p></li>
-<li><p><strong>liteobjects</strong></p></li>
-<li><p><strong><a
-href="https://ashupednekar.github.io/rust-handling-large-payloads/">Rust:
-Handling Large Payloads Efficiently</a></strong></p></li>
-<li><p><strong><a
-href="https://ashupednekar.github.io/distributed-task-scheduler-nats/">Building
-a Distributed Task Scheduler with NATS JetStream</a></strong></p></li>
-<li><p><strong><a
-href="https://ashupednekar.github.io/rust-backend-ecosystem/">Exploring
-Rust’s Ecosystem for Backend Development</a></strong></p></li>
-</ul>
-<hr />
-<h2 id="interests">Interests</h2>
-<ul>
-<li>Low-level systems programming, eBPF, and Linux kernel
-internals<br />
-</li>
-<li>Distributed systems, fault-tolerant design, and resilient service
-architectures<br />
-</li>
-<li>Functional programming and designing systems with minimal side
-effects<br />
-</li>
-<li>Observability, tracing, and infrastructure monitoring<br />
-</li>
-<li>Solving hard problems through clean, maintainable code<br />
-</li>
-<li>Tech streaming and exploring new paradigms in backend
-development</li>
-</ul>
-<hr />
-<h2 id="talks-community">Talks &amp; Community</h2>
-<ul>
-<li><strong>PyCon India 2024</strong> – <em>Quick gRPC for REST
-Developers</em><br />
-</li>
-<li><strong>Wasm IO 2025 (upcoming)</strong> – <em>Wasm Filters for
-External Auth in NGINX/Envoy</em></li>
-</ul>
-<hr />
-<h2 id="education">Education</h2>
-<p><strong>Bachelor’s in Computer Science</strong><br />
-Focus: Operating Systems, Networks, Distributed Systems</p>
+    <div class="container">
+        <!-- Left Column (35%) -->
+        <div class="left-column">
+            <div class="profile-section">
+                <div class="profile-photo">
+                    <img src="https://miro.medium.com/v2/resize:fill:88:88/1*M0elUzNjnLiz85r_IiqRcg.jpeg" alt="Ashu Pednekar" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                </div>
+                <div class="name">ASHU<br>PEDNEKAR</div>
+                <div class="title">Senior Software Engineer</div>
+            </div>
+            
+            <div class="contact-info">
+                <div><strong>Email:</strong><br>ashupednekar49@gmail.com</div>
+                <div><strong>Phone:</strong><br>+91-8806416267</div>
+                <div><strong>Location:</strong><br>Bengaluru, India</div>
+                <div><strong>LinkedIn:</strong><br>linkedin.com/in/ashupednekar</div>
+                <div><strong>Threads:</strong><br>threads.net/@iashpee</div>
+                <div><strong>Blog:</strong><br>ashupednekar.github.io</div>
+            </div>
+            
+            <div class="section-title">Technical Skills</div>
+            <div class="skills-section">
+                <div class="skill-category">Programming Languages</div>
+                <div class="skill-list">Rust (primary), Go, Python, Lua, Zig, C</div>
+                
+                <div class="skill-category">Platforms & Tools</div>
+                <div class="skill-list">Linux, Kubernetes, Docker, WebAssembly, NATS, Redis, PostgreSQL</div>
+                
+                <div class="skill-category">Frameworks & Libraries</div>
+                <div class="skill-list">Axum, Django, Go std lib, PyO3, Tokio</div>
+                
+                <div class="skill-category">Architecture</div>
+                <div class="skill-list">Event-driven systems, distributed schedulers, tracing pipelines, fault-tolerant backends</div>
+                
+                <div class="skill-category">Core Competencies</div>
+                <div class="skill-list">Distributed systems, systems design, backend infrastructure, pub/sub systems, observability, functional programming, DevOps tools, databases, tracing, Linux internals</div>
+            </div>
+            
+            <div class="section-title">Certifications</div>
+            <div class="certifications">
+                <span class="cert-badge">CKA</span>
+                <span class="cert-badge">CKAD</span>
+                <span class="cert-badge">CKS</span>
+                <span class="cert-badge">Terraform Dev</span>
+            </div>
+            
+            <div class="section-title">Areas of Interest</div>
+            <div class="interests">
+                <ul>
+                    <li>Low-level systems programming, eBPF, Linux kernel internals</li>
+                    <li>Distributed systems, fault-tolerant design, resilient architectures</li>
+                    <li>Functional programming, minimal side effects</li>
+                    <li>Observability, tracing, infrastructure monitoring</li>
+                    <li>Clean, maintainable code for complex problems</li>
+                    <li>Tech streaming, new backend paradigms</li>
+                    <li>Writing technical blogs on systems programming</li>
+                    <li>Error handling patterns across languages</li>
+                    <li>Building developer tools and CLI applications</li>
+                </ul>
+            </div>
+            
+            <div class="section-title">Technical Writing</div>
+            <div class="interests">
+                <ul>
+                    <li>Error Handling Across Languages: Python, Go, and Rust</li>
+                    <li>Systems Programming Deep Dives</li>
+                    <li>Distributed Systems Design Patterns</li>
+                    <li>Rust Performance Optimization Techniques</li>
+                    <li>Container Orchestration Best Practices</li>
+                </ul>
+            </div>
+            
+            <div class="section-title">Community Engagement</div>
+            <div class="interests">
+                <ul>
+                    <li>Active on Threads discussing backend architecture</li>
+                    <li>Open source contributor and maintainer</li>
+                    <li>Technical conference speaker</li>
+                    <li>Mentoring junior developers in systems programming</li>
+                    <li>Regular blog posts on complex technical topics</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Right Column (65%) -->
+        <div class="right-column">
+            <div class="section-title right">Professional Summary</div>
+            <div class="summary">
+              Senior Software Architect with a strong focus on backend development, distributed systems, and systems programming. I have experience designing scalable and resilient systems, working with high-throughput pub/sub systems, and building backend tools that align with modern infrastructure needs. I believe in working on craft-oriented problems that emphasize correctness, simplicity, and maintainability. Currently focused on low-level systems programming, functional programming principles, and distributed systems design.
+            </div>
+            
+            <div class="section-title right">Professional Experience</div>
+            <div class="experience-item">
+                <div class="job-header">
+                    <div class="job-title">Senior Software Architect</div>
+                    <div class="date">2021 – Present</div>
+                    <div class="company">Affinsys AI</div>
+                </div>
+                <div class="job-description">
+                    <ul>
+                        <li>Led technical architecture decisions working directly with CTO, establishing technology roadmaps and strategic direction</li>
+                        <li>Managed and mentored a diverse engineering team ranging from backend developers to DevOps engineers, fostering cross-functional collaboration</li>
+                        <li>Designed and developed high-throughput task scheduling and distributed pub/sub systems for reliable and concurrent execution</li>
+                        <li>Built scalable, event-driven backend services with real-time observability, tracing, and performance monitoring</li>
+                        <li>Architected and deployed containerized microservices on Kubernetes, optimizing for resilience and scalability</li>
+                        <li>Drove adoption of a Rust-first backend stack, achieving significant performance gains and reduced memory usage</li>
+                        <li>Developed internal platforms and automation tools to streamline DevOps workflows, CI/CD, and infrastructure management</li>
+                        <li>Contributed to natural language processing pipelines and machine learning infrastructure for production workloads</li>
+                        <li>Implemented Helm-based deployment strategies enabling consistent rollouts across major cloud providers and on-premises clusters</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section-title right page-break">Open Source & Personal Projects</div>
+            <div class="projects-grid">
+                <div class="project-item">
+                    <div class="project-name">liteginx</div>
+                    <div class="project-desc">Reverse proxy for HTTP routing and TCP streams written in Rust</div>
+                </div>
+                <div class="project-item">
+                    <div class="project-name">litefunctions</div>
+                    <div class="project-desc">My take on lambda functions, essentially a Kubernetes operator managing CD, HTTP ingestor and runtimes for various languages</div>
+                </div>
+                <div class="project-item">
+                    <div class="project-name">websocketstream</div>
+                    <div class="project-desc">Stateless WebSocket ingestor, scaling WebSockets with persistent pub/sub</div>
+                </div>
+                <div class="project-item">
+                    <div class="project-name">standard-error</div>
+                    <div class="project-desc">A simple crate that makes it easier for Axum applications to do well-defined errors with most from traits built in</div>
+                </div>
+                <div class="project-item">
+                    <div class="project-name">quickgrpc</div>
+                    <div class="project-desc">Makes it simple to build gRPC servers in Python, similar to what Tonic does today, abstracting the protoc tooling</div>
+                </div>
+                <div class="project-item">
+                    <div class="project-name">Raft Implementation</div>
+                    <div class="project-desc">Implemented Raft leader election from scratch for distributed consensus systems</div>
+                </div>
+            </div>
+            
+            <div class="section-title right">Upcoming Projects</div>
+            <div class="upcoming-projects">
+                <ul>
+                    <li>TLS termination support to liteginx</li>
+                    <li>gRPC transcoding to OpenAPI spec/pub/sub topics, mostly as a feature to liteginx</li>
+                    <li>Look into Ferron for OSS contributions</li>
+                    <li>litedb, maybe a distributed SQLite with HashiCorp Raft library</li>
+                    <li>liteobjects, this one's in progress, looking into object store internals</li>
+                </ul>
+                <div style="font-size: 8pt; color: #666; margin-top: 8px; font-style: italic;">
+                    Most projects documented on my blog
+                </div>
+            </div>
+            
+            <div class="section-title right">Speaking Engagements</div>
+            <div class="talks-item">
+                <div class="talk-title">Quick gRPC for REST Developers</div>
+                <div class="talk-event">PyCon India 2024</div>
+            </div>
+            
+            <div class="section-title right">Education</div>
+            <div class="education-item">
+                <div class="degree">Bachelor's in Computer Science</div>
+                <div class="focus">Focus: Operating Systems, Networks, Distributed Systems</div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
