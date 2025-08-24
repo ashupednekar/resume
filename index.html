@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ashu Pednekar - Senior Software Engineer</title>
     <style>
@@ -290,22 +289,78 @@
         
         @media print {
             body { 
-                margin: 0; 
-            }
-            .container { 
-                max-width: none; 
-                box-shadow: none;
-                min-height: auto;
-                page-break-after: always;
-            }
-            .left-column, .right-column {
-                padding: 16px;
+                margin: 0;
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+                print-color-adjust: exact;
             }
             
-            /* Force page break after specific content */
-            .page-break {
-                page-break-after: always;
+            .container { 
+                max-width: 8.5in;
+                width: 8.5in;
+                box-shadow: none;
+                min-height: 11in;
+                height: auto;
+                page-break-after: avoid;
+                display: grid;
+                grid-template-columns: 2.975in 5.525in; /* Fixed widths instead of fractional */
             }
+            
+            .left-column, .right-column {
+                padding: 14px;
+                break-inside: avoid;
+            }
+            
+            .left-column {
+                width: 2.975in;
+                background: #f8f9fa !important;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .right-column {
+                width: 5.525in;
+            }
+            
+            /* Ensure colors print correctly */
+            .profile-photo,
+            .section-title,
+            .cert-badge,
+            .project-item {
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            /* Prevent awkward breaks */
+            .experience-item,
+            .project-item,
+            .talks-item,
+            .education-item {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            
+            /* Force single page if possible */
+            .container {
+                page-break-after: avoid;
+                page-break-before: avoid;
+            }
+            
+            /* Fix any overflow issues */
+            * {
+                max-width: 100% !important;
+            }
+            
+            .job-description li,
+            .interests li,
+            .upcoming-projects li {
+                break-inside: avoid;
+            }
+        }
+        
+        @page {
+            size: letter;
+            margin: 0.5in;
         }
     </style>
 </head>
@@ -413,19 +468,19 @@
                     <ul>
                         <li>Led technical architecture decisions working directly with CTO, establishing technology roadmaps and strategic direction</li>
                         <li>Managed and mentored a diverse engineering team ranging from backend developers to DevOps engineers, fostering cross-functional collaboration</li>
-                        <li>Designed and developed high-throughput task scheduling and distributed pub/sub systems for reliable and concurrent execution (improved throughput by 40%)</li>
-                        <li>Built scalable, event-driven backend services with real-time observability, tracing, and performance monitoring (reduced incident MTTR by 30%)</li>
-                        <li>Architected and deployed containerized microservices on Kubernetes, optimizing for resilience and scalability (cut downtime by 25%)</li>
-                        <li>Drove adoption of a Rust-first backend stack, achieving significant performance gains and reduced memory usage (30–50% lower footprint)</li>
-                        <li>Developed internal platforms and automation tools to streamline DevOps workflows, CI/CD, and infrastructure management (cut deployment time by 60%)</li>
-                        <li>Contributed to natural language processing pipelines and machine learning infrastructure for production workloads (10x faster training iterations)</li>
+                        <li>Designed and developed high-throughput task scheduling and distributed pub/sub systems for reliable and concurrent execution (improved throughput by ~40% in certain cases)</li>
+                        <li>Built scalable, event-driven backend services with real-time observability, tracing, and performance monitoring (reduced incident MTTR by ~30%)</li>
+                        <li>Architected and deployed containerized microservices on Kubernetes, optimizing for resilience and scalability</li>
+                        <li>Drove adoption of a Rust-first backend stack, achieving significant performance gains and reduced memory usage (roughly 20% lower footprint)</li>
+                        <li>Developed internal platforms and automation tools to streamline DevOps workflows, CI/CD, and infrastructure management (cut deployment time from days to minutes)</li>
+                        <li>Contributed to natural language processing pipelines and machine learning infrastructure for production workloads</li>
                         <li>Implemented Helm-based deployment strategies enabling consistent rollouts across major cloud providers and on-premises clusters</li>
                         <li>Spearheaded efforts to reduce memory costs through rewrites, merging microservices, avoiding consumer sidecars via shared PVCs, moving Python services to Granian single processes, and using feature flags to scale inference services to zero (cut infra spend by ~35%)</li>
                     </ul>
                 </div>
             </div>
             
-            <div class="section-title right page-break">Open Source & Personal Projects</div>
+            <div class="section-title right">Open Source & Personal Projects</div>
             <div class="projects-grid">
                 <div class="project-item">
                     <div class="project-name">liteginx <a href="https://github.com/ashupednekar/liteginx" target="_blank"><i class="fab fa-github"></i></a></div>
@@ -456,11 +511,11 @@
             <div class="section-title right">Upcoming Projects</div>
             <div class="upcoming-projects">
                 <ul>
-                    <li>  TLS termination support to liteginx</li>
-                    <li>  gRPC transcoding to OpenAPI spec/pub/sub topics, mostly as a feature to liteginx</li>
-                    <li>  Look into Ferron for OSS contributions</li>
-                    <li>  litedb, maybe a distributed SQLite with HashiCorp Raft library</li>
-                    <li>  liteobjects, this one's in progress, looking into object store internals</li>
+                    <li>TLS termination support to liteginx</li>
+                    <li>gRPC transcoding to OpenAPI spec/pub/sub topics, mostly as a feature to liteginx</li>
+                    <li>Look into Ferron for OSS contributions</li>
+                    <li>litedb, maybe a distributed SQLite with HashiCorp Raft library</li>
+                    <li>liteobjects, this one's in progress, looking into object store internals</li>
                 </ul>
                 <div style="font-size: 8pt; color: #666; margin-top: 8px; font-style: italic;">
                     Most projects documented on my blog
