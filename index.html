@@ -470,12 +470,12 @@
     <li>Led core architecture decisions with the CTO, setting direction and keeping the roadmap practical</li>
     <li>Built and ran with a mixed team — backend, infra, DevOps — keeping things moving and shipping</li>
     <li>Designed high-throughput task scheduling + pub/sub infra, pushed concurrency, saw ~40% throughput gains</li>
-    <li>Backend services wired for events, real-time tracing + observability; cut MTTR ~30%</li>
+    <li>Drove real-time observability and tracing across backend services; tighter visibility cut MTTR by ~30%</li>
     <li>Moved workloads to Kubernetes, tuned for scale and failover</li>
     <li>Drove Rust-first backend shift — better perf, leaner memory (~20% footprint drop)</li>
     <li>Designed essentials and services into meaningful module charts, and automated lots of setup pains like certificate issuance, secret management, database confguration, volume claims, service dependencies, etc into installable charts, turned deploys from days to minutes</li>
     <li>Reduced friction/misconfigurations for day operations like rollbacks and upgrades for complex microservice deployment to manageable modules, saving weeks worth of rework and risks</li>
-    <li>Cut infra costs ~35% by trimming memory use, merging services, dropping sidecars, moving Python to Granian single-procs, scaling inference to zero when idle</li>
+    <li>Cut infra costs ~30-35% by consolidating http ingestion, merging services per domain, having better metrics for hpa, migrating away from process managers, avoiding unnecessary sidecars, scaling down certain services like inference to 0, shifting control left as much as possible, blurring the line between dev/ops and fostering shared responsibility</li>
 </ul>
                 </div>
             </div>
