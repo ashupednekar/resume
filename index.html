@@ -473,9 +473,8 @@
     <li>Backend services wired for events, real-time tracing + observability; cut MTTR ~30%</li>
     <li>Moved workloads to Kubernetes, tuned for scale and failover</li>
     <li>Drove Rust-first backend shift — better perf, leaner memory (~20% footprint drop)</li>
-    <li>Put together tooling/automation to make CI/CD and infra sane — turned deploys from days to minutes</li>
-    <li>Production ML infra + NLP pipelines, stable under load</li>
-    <li>Standardized rollouts with Helm, worked across cloud + on-prem</li>
+    <li>Designed essentials and services into meaningful module charts, and automated lots of setup pains like certificate issuance, secret management, database confguration, volume claims, service dependencies, etc into installable charts, turned deploys from days to minutes</li>
+    <li>Reduced friction/misconfigurations for day operations like rollbacks and upgrades for complex microservice deployment to manageable modules, saving weeks worth of rework and risks</li>
     <li>Cut infra costs ~35% by trimming memory use, merging services, dropping sidecars, moving Python to Granian single-procs, scaling inference to zero when idle</li>
 </ul>
                 </div>
